@@ -1,0 +1,17 @@
+googletrans==4.0.0-rc1
+pyaudio
+SpeechRecognition 
+espeakng
+python-vlc
+youtube_dl
+youtube_search
+git+https://github.com/Cupcakus/pafy
+gtts
+sockets
+wikipedia
+regex
+requests
+py-cord
+face_recognition
+opencv-python
+numpy
