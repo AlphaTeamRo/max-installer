@@ -35,6 +35,8 @@ apt-get -y install wget
 
 #install pip dependencies
 
+wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/requirements.txt -P /home/$install_user/max-scripts
+
 runuser -l $install_user -c "python3 -m pip install youtube_dl"
 runuser -l $install_user -c "python3 -m pip install -r $PWD/requirements.txt"
 
