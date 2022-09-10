@@ -4,7 +4,7 @@
 ### This repo is public because we want the one-line installer to work
 
 ## Install
-As root and in the home directory of the robot user, run the following command
+In the home directory of the robot user, run the following command
 ```
-apt -y install curl && mkdir max-scripts && curl -sSL https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/setup.sh | bash
+sudo apt update && sudo apt -y install curl && curl https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/setup.sh
 ```
