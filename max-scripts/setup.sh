@@ -31,6 +31,7 @@ apt-get -y install portaudio19-dev
 apt-get -y install vlc
 apt-get -y install python3-pip
 apt-get -y install cmake
+apt-get -y install feh
 
 #install pip dependencies
 
