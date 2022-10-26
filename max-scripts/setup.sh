@@ -40,6 +40,9 @@ wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-script
 runuser -l $install_user -c "python3 -m pip install youtube_dl"
 runuser -l $install_user -c "python3 -m pip install -r $PWD/requirements.txt"
 
+#download static.jpg
+wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/static.jpg -P /home/$install_user/max-scripts
+
 #create services
 
 #face service
