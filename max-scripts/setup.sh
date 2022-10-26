@@ -19,10 +19,10 @@ apt-get -y update
 apt-get -y install git
 
 #pull from github
-git clone https://github.com/AlphaTeamRo/app-socket-server
-git clone https://github.com/AlphaTeamRo/max-discord-bot
-git clone https://github.com/AlphaTeamRo/max-facerec-v2
-git clone https://github.com/AlphaTeamRo/max_voice
+runuser -l $install_user -c git clone https://github.com/AlphaTeamRo/app-socket-server
+runuser -l $install_user -c git clone https://github.com/AlphaTeamRo/max-discord-bot
+runuser -l $install_user -c git clone https://github.com/AlphaTeamRo/max-facerec-v2
+runuser -l $install_user -c git clone https://github.com/AlphaTeamRo/max_voice
 
 #install apt dependencies
 apt-get -y install espeak-ng
@@ -35,13 +35,13 @@ apt-get -y install feh
 
 #install pip dependencies
 
-wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/requirements.txt -P /home/$install_user/max-scripts
+runuser -l $install_user -c wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/requirements.txt -P /home/$install_user/max-scripts
 
 runuser -l $install_user -c "python3 -m pip install youtube_dl"
 runuser -l $install_user -c "python3 -m pip install -r $PWD/requirements.txt"
 
 #download static.jpg
-wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/static.jpg -P /home/$install_user/max-scripts
+runuser -l $install_user -c wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/static.jpg -P /home/$install_user/max-scripts
 
 #create services
 
