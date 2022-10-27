@@ -31,7 +31,6 @@ apt-get -y install portaudio19-dev
 apt-get -y install vlc
 apt-get -y install python3-pip
 apt-get -y install cmake
-apt-get -y install feh
 
 #install pip dependencies
 
@@ -40,9 +39,6 @@ runuser -l $install_user -c wget https://raw.githubusercontent.com/AlphaTeamRo/m
 runuser -l $install_user -c "python3 -m pip install youtube_dl"
 runuser -l $install_user -c "python3 -m pip install -r $PWD/requirements.txt"
 
-#download static.jpg
-runuser -l $install_user -c wget https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/static.jpg -P /home/$install_user/max-scripts
-
 #create services
 
 #face service
@@ -50,7 +46,7 @@ runuser -l $install_user -c wget https://raw.githubusercontent.com/AlphaTeamRo/m
 printf "Description=Executarea face la pornire
 [Service]
 Environment=XDG_RUNTIME_DIR=/run/user/1000
-ExecStart=/bin/bash -c 'DISPLAY=:0 python3 -u /home/$install_user/max-scripts/max-facerec-v2/face.py'
+ExecStart=/bin/bash -c 'python3 -u /home/$install_user/max-scripts/max-facerec-v2/face.py'
 WorkingDirectory=/home/$install_user/max-scripts/max-facerec-v2
 Restart=always
 User=$install_user
@@ -62,7 +58,7 @@ WantedBy=multi-user.target" > /lib/systemd/system/face.service
 printf "Description=Executarea voice la pornire
 [Service]
 Environment=XDG_RUNTIME_DIR=/run/user/1000
-ExecStart=/bin/bash -c 'DISPLAY=:0 python3 -u /home/$install_user/max-scripts/max_voice/max_voice.py'
+ExecStart=/bin/bash -c 'python3 -u /home/$install_user/max-scripts/max_voice/max_voice.py'
 WorkingDirectory=/home/$install_user/max-scripts/max_voice
 Restart=always
 User=$install_user
