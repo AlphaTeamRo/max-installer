@@ -35,7 +35,7 @@ read -r -p "Do you want to reinstall? [y/N]: " reinstall_response
 
 if [[ "$reinstall_response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-    apt update && apt -y install curl && curl https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/run.sh | bash && cd max-scripts && ./setup
+    apt update && apt -y install curl && curl https://raw.githubusercontent.com/AlphaTeamRo/max-installer/main/max-scripts/run.sh | bash && cd max-scripts && ./setup.sh
 else
     echo "Ok. Max software will not be installed. Exiting..."
     exit
