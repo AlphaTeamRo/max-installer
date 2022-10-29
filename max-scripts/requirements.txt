@@ -15,3 +15,4 @@ py-cord
 face_recognition
 opencv-python
 numpy
+pyyaml
