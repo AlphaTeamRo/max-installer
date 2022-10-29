@@ -15,4 +15,5 @@ py-cord
 face_recognition
 opencv-python
 numpy
+google-search-results
 pyyaml
