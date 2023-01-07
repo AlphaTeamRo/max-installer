@@ -97,6 +97,8 @@ then
     systemctl enable voice.service
     systemctl enable discord.service
     systemctl enable appsocket.service
+    echo "Max installed. Services have been enabled ! Exiting..."
+    exit
 else
     echo "Ok. Services will not be enabled. Exiting..."
     exit
