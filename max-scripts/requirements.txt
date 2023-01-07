@@ -1,6 +1,6 @@
 googletrans==4.0.0-rc1
 pyaudio
-SpeechRecognition 
+SpeechRecognition==3.8.1
 espeakng
 python-vlc
 youtube_dl
